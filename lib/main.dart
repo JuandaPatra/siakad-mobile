@@ -1,28 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:siakad_mobile/pages/auth/widgets/splash_page.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: Container(
-          child: Padding(
-            padding: EdgeInsets.fromLTRB(10, 100, 10, 100),
-            child: Column(
-              children: [
-                Text('Tekan lorem'),
-                ElevatedButton(onPressed: () {}, child: const Text('data')),
-              ],
-            ),
-          ),
-        ),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
+      home: const SplashPage(),
     );
   }
 }
